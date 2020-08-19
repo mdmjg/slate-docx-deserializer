@@ -1,7 +1,5 @@
 import React from 'react'
-import { StyleSheet, css as a_css } from 'aphrodite'
-import { css } from 'emotion'
-import { useSelected, useFocused } from 'slate-react'
+import { StyleSheet, css } from 'aphrodite'
 
 const styles = StyleSheet.create({
   level1: {
@@ -19,6 +17,11 @@ const styles = StyleSheet.create({
   level5: {
     paddingLeft: '20%',
   },
+  img: {
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '20em',
+  }
 })
 export const Element = props => {
   const { attributes, children, element } = props
@@ -75,31 +78,22 @@ export const Element = props => {
 
 export const TextItem = ({ attributes, children, element }) => {
   const style = element.className
-  return <p className={a_css(styles[style])}>{children}</p>
+  return <p className={css(styles[style])}>{children}</p>
 }
 
 export const ListItem = ({ attributes, children, element }) => {
   const level = element.className
   return (
-    <div className={a_css(styles[level])}>
+    <div className={css(styles[level])}>
       <li {...attributes}>{children}</li>
     </div>
   )
 }
 
 export const ImageElement = ({ attributes, children, element }) => {
-  const selected = useSelected()
-  const focused = useFocused()
-
   return (
-    <img
+    <img className={css(styles.img)}
       src={element.url}
-      className={css`
-        display: block;
-        max-width: 100%;
-        max-height: 20em;
-        box-shadow: ${selected && focused ? '0 0 0 2px blue;' : 'none'};
-      `}
     />
   )
 }

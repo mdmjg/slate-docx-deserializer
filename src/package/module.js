@@ -144,7 +144,6 @@ function getSiblings(el) {
 
 // Docx lists begin with "MsoListParagraph".
 function isList(el) {
-  console.log(el)
   if (
     el.attributes &&
     el.attributes.getNamedItem('class') &&
@@ -165,15 +164,10 @@ function isOrderedList(el) {
   return false
 }
 
-// child.textContent = child.textContent.replace(/^[\W\D]*/gm, '')
-//       // ^[\W\D]*
-//       console.log('it dont be period', child)
+
 // receives a list item and returns the text inside it
 // sometimes the text will be inside a text tag or inside a span tag.
 // when it is inside a text tag, the span is irrelevant, but it contains empty text inside
-
-// to orchestrate (from cv pastes weird)
-
 function getTextfromList(el) {
   const children = Array.from(el.childNodes)
   const result = []
@@ -190,13 +184,3 @@ function getTextfromList(el) {
   })
   return result
 }
-
-// module.exports = {
-//   deserialize,
-//   deserializeElement,
-//   deserializeList,
-//   deserializeListItem,
-//   isList,
-//   getSiblings,
-//   getTextfromList,
-// }

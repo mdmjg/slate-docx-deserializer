@@ -1,4 +1,4 @@
-import React from 'react'
+// Element and Text Tags Definitions
 
 export const ELEMENT_TAGS = {
   A: el => ({ type: 'link', url: el.getAttribute('href') }),
