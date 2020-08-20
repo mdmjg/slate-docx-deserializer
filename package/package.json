@@ -1,7 +1,7 @@
 {
   "name": "slate-docx-deserializer",
-  "version": "1.0.1",
-  "main": "index.js",
+  "version": "1.0.2",
+  "main": "src/index.js",
   "author": "mdmjg <mdj308@nyu.edu>",
   "license": "MIT",
   "devDependencies": {
@@ -29,7 +29,6 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "slate": "^0.58.4",
-    "slate-history": "^0.58.4",
     "slate-hyperscript": "^0.58.4",
     "slate-react": "^0.58.4"
   },
