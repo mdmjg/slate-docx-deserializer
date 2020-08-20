@@ -4,13 +4,15 @@ import { withHistory } from 'slate-history'
 import { Slate, Editable, withReact } from 'slate-react'
 import { Element, Leaf } from '../package/src/components'
 import { withDocxDeserializer } from '../package/src/docxDeserializer'
+import { jsx } from 'slate-hyperscript'
+
 
 const PasteDocxExample = () => {
   const [value, setValue] = useState(initialValue)
   const renderElement = useCallback(props => <Element {...props} />, [])
   const renderLeaf = useCallback(props => <Leaf {...props} />, [])
   const editor = useMemo(
-    () => withDocxDeserializer(withReact(withHistory(createEditor()))),
+    () => withDocxDeserializer(withReact(withHistory(createEditor())), jsx),
     []
   )
   return (

@@ -1,7 +1,8 @@
 
-import { deserialize } from '../src/module.js';
+import { makeDeserializer } from '../src/module.js';
 import { parse } from '@babel/core';
 // const deserialize = require('../src/module')
+import { jsx } from 'slate-hyperscript'
 
 /**
  * @jest-environment jsdom
@@ -10,6 +11,7 @@ import { parse } from '@babel/core';
 
 
 test('deserialize list to equal {type: "ul", className: "H3", children: Array(1) }', () => {
+  const deserialize = makeDeserializer(jsx)
   const input = "<body lang=EN-US style='tab-interval:.5in'><!--StartFragment--> <p class=MsoListParagraph style='text-indent:-.25in;mso-list:l0 level1 lfo1'><![if !supportLists]><span style='font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family: Symbol;mso-bidi-font-style:italic'><span style='mso-list:Ignore'>·<span style='font:7.0pt \"Times New Roman\"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><i>Level 1.2<o:p></o:p></i></p> <!--EndFragment--> </body>";
   const parsed_html = new DOMParser().parseFromString(input, 'text/html')
   const output = [{ "type": "p", "className": "P", "children": [{ "text": " " }] }, {

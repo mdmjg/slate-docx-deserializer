@@ -1,8 +1,10 @@
 import { imagePastingListener } from './utils'
-import { deserialize } from './module'
+import { makeDeserializer } from './module'
 
-export const withDocxDeserializer = editor => {
+export const withDocxDeserializer = (editor, jsx) => {
   const { insertData, isInline, isVoid, insertFragment } = editor
+  const deserialize = makeDeserializer(jsx)
+
 
   editor.insertFragment = element => {
     insertFragment(element)

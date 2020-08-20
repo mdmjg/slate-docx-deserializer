@@ -1,7 +1,8 @@
 
-import { deserialize } from '../src/module.js';
+import { makeDeserializer } from '../src/module.js';
 import { parse } from '@babel/core';
 // const deserialize = require('../src/module')
+import { jsx } from "slate-hyperscript"
 
 /**
  * @jest-environment jsdom
@@ -10,6 +11,7 @@ import { parse } from '@babel/core';
 
 
 test('deserialize table to match object of type table', () => {
+  const deserialize = makeDeserializer(jsx)
   const input = "<table class=MsoTableGrid> <tr><td ><p class=MsoNormal></p></td><td ><p class=MsoNormal></p></td></tr><tr ><td ><p class=MsoNormal></p></td><td ><p class=MsoNormal></p></td></tr></table>";
   const parsed_html = new DOMParser().parseFromString(input, 'text/html')
   const output = [{ "type": "p", "className": "P", "children": [{ "text": " " }] }, {

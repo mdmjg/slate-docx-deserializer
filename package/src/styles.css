@@ -1,0 +1,22 @@
+
+  .level1 {
+    padding-left: 0px
+  }
+  .level2 {
+    padding-left: 15px
+  }
+  
+  .level3 {
+    padding-left: 30px
+  }
+  .level4 {
+    padding-left: 45px
+  }
+  .level5 {
+    padding-left: 60px
+  }
+  img {
+    display: block;
+    max-width: 100%;
+    max-height: 20em;
+  }

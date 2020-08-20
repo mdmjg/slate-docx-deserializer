@@ -1,28 +1,8 @@
 import React from 'react'
 import { StyleSheet, css } from 'aphrodite'
+import "./styles.css"
 
-const styles = StyleSheet.create({
-  level1: {
-    paddingLeft: '0%',
-  },
-  level2: {
-    paddingLeft: '5%',
-  },
-  level3: {
-    paddingLeft: '10%',
-  },
-  level4: {
-    paddingLeft: '15%',
-  },
-  level5: {
-    paddingLeft: '20%',
-  },
-  img: {
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '20em',
-  }
-})
+
 export const Element = props => {
   const { attributes, children, element } = props
 
@@ -78,13 +58,13 @@ export const Element = props => {
 
 export const TextItem = ({ attributes, children, element }) => {
   const style = element.className
-  return <p className={css(styles[style])}>{children}</p>
+  return <p className={style}>{children}</p>
 }
 
 export const ListItem = ({ attributes, children, element }) => {
   const level = element.className
   return (
-    <div className={css(styles[level])}>
+    <div className={level}>
       <li {...attributes}>{children}</li>
     </div>
   )
@@ -92,7 +72,7 @@ export const ListItem = ({ attributes, children, element }) => {
 
 export const ImageElement = ({ attributes, children, element }) => {
   return (
-    <img className={css(styles.img)}
+    <img
       src={element.url}
     />
   )
