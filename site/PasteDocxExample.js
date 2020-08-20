@@ -3,7 +3,7 @@ import { createEditor } from 'slate'
 import { withHistory } from 'slate-history'
 import { Slate, Editable, withReact } from 'slate-react'
 import { Element, Leaf } from '../package/src/components'
-import { withDocxDeserializer } from '../package/src/docxDeserializer'
+import { withDocxDeserializer } from 'slate-docx-deserializer'
 import { jsx } from 'slate-hyperscript'
 
 
