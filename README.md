@@ -9,7 +9,7 @@ Fortunately, this plugin will meet your basic needs when pasting content from Wo
 
 If you want to use the deserializer in your Editor, import it
 
-`import { withDocxDeserializer } from 'slate-docx-deserializer`
+`import { withDocxDeserializer } from 'slate-docx-deserializer'`
 
 The deserializer supports slate's slate-hyperscript jsx. To customize your own jsx, just go into `package/src/module.js` and import your own jsx. 
 
