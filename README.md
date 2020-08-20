@@ -4,7 +4,7 @@ Microsoft Word deserializer for Slatejs
 Slate is a completely customizable framework for building rich text editors. Unfortunately, when pasting Microsoft Word content into Slate, the formatting is lost. The mythical html format of Wordx has limited the creation of an accurate deserializer.
 Fortunately, this plugin will meet your basic needs when pasting content from Word and maintaining its formatting. 
 
-### Usage
+## Usage
  `yarn add slate-docx-deserializer`
 
 If you want to use the deserializer in your Editor, import it
@@ -15,7 +15,7 @@ If you want to use the deserializer in your Editor, import it
 
 The Plugin allows you to use your own JSX. I used slate-hyperscript's jsx, but you may use your own by importing it and then passing it as a parameter when calling `withDocxDeserializer`. See `site/PasteDocxDeserializer.js` for an example.
 
-### Checkout an Example
+## Checkout an Example
 
 https://slate-docx-deserializer.netlify.app/
 
@@ -33,9 +33,7 @@ https://slate-docx-deserializer.netlify.app/
 The plugin does NOT support:
 * Nested Ordered Lists (it currently supports nested unordered lists because of styling workarounds)
 
-### Customizable Options
-* If you want to modify the styling and element definitions, go to `package/src/components`
-* If you want to run some tests, go to `package` and run `yarn test`
+
 
 
 
