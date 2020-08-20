@@ -27,7 +27,6 @@ export const withDocxDeserializer = (editor, jsx) => {
     if (html) {
       const parsed_html = new DOMParser().parseFromString(html, 'text/html')
       const fragment = deserialize(parsed_html.body, imageTags)
-      console.log(fragment)
       editor.insertFragment(fragment)
       return
     }

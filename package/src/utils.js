@@ -40,7 +40,7 @@ const extractFromRtf = rtfContent => {
     `(?:(${rePictureHeader.source}))([\\da-fA-F\\s]+)\\}`,
     'g'
   )
-  const imageType = ''
+  let imageType = ''
 
   const wholeImages = rtfContent.match(rePicture)
   if (!wholeImages) {
@@ -48,7 +48,6 @@ const extractFromRtf = rtfContent => {
   }
 
   for (let i = 0; i < wholeImages.length; i++) {
-    const imageType = ''
     if (rePictureHeader.test(wholeImages[i])) {
       if (wholeImages[i].indexOf('\\pngblip') !== -1) {
         imageType = 'image/png'

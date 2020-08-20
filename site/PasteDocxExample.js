@@ -16,7 +16,7 @@ const PasteDocxExample = () => {
     []
   )
   return (
-    <div class='container'>
+    <div className='container'>
       <Slate editor={editor} value={value} onChange={value => setValue(value)}>
         <Editable
           renderElement={renderElement}

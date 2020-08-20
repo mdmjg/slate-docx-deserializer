@@ -2,7 +2,6 @@ import { ELEMENT_TAGS, TEXT_TAGS } from './native'
 
 export const makeDeserializer = (jsx) => {
   const deserialize = (el, imageTags) => {
-    console.log('el', el)
     if (
       el.attributes &&
       el.attributes.getNamedItem('class') &&
