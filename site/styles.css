@@ -12,7 +12,6 @@ body {
 
 p {
   margin: 0;
-  color: green;
 }
 
 pre {
@@ -22,8 +21,8 @@ pre {
 }
 
 h1 {
-  color: green;
-
+  padding: 20px;
+  
 }
 
 :not(pre) > code {
@@ -79,4 +78,12 @@ input:focus {
 
 [data-slate-editor] > * + * {
   margin-top: 1em;
+}
+
+.container {
+  padding: 20px;
+  background: #fff;
+  margin: 20px auto;
+  max-width: 42em;
+
 }

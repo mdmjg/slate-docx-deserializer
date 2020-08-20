@@ -2,8 +2,8 @@ import React, { useState, useCallback, useMemo } from 'react'
 import { createEditor } from 'slate'
 import { withHistory } from 'slate-history'
 import { Slate, Editable, withReact } from 'slate-react'
-import { Element, Leaf } from '../package/components'
-import { withDocxDeserializer } from '../package/docxDeserializer'
+import { Element, Leaf } from '../package/src/components'
+import { withDocxDeserializer } from '../package/src/docxDeserializer'
 
 const PasteDocxExample = () => {
   const [value, setValue] = useState(initialValue)

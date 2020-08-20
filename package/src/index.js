@@ -1,0 +1,1 @@
+export { withDocxDeserializer } from "./docxDeserializer"
