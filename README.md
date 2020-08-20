@@ -18,7 +18,7 @@ The deserializer supports slate's slate-hyperscript jsx. To customize your own j
 https://slate-docx-deserializer.netlify.app/
 
 
-The plugin currently supports the following:
+### The plugin currently supports the following:
 * Tables
 * Nested Lists
 * Images
@@ -30,6 +30,10 @@ The plugin currently supports the following:
 
 The plugin does NOT support:
 * Nested Ordered Lists (it currently supports nested unordered lists because of styling workarounds)
+
+### Customizable Options
+* If you want to modify the styling and element definitions, go to `package/src/components`
+* If you want to run some tests, go to `package` and run `yarn test`
 
 
 
