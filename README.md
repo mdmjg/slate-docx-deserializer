@@ -11,7 +11,9 @@ If you want to use the deserializer in your Editor, import it
 
 `import { withDocxDeserializer } from 'slate-docx-deserializer'`
 
-The deserializer supports slate's slate-hyperscript jsx. To customize your own jsx, just go into `package/src/module.js` and import your own jsx. 
+## Customizing your own JSX
+
+The Plugin allows you to use your own JSX. I used slate-hyperscript's jsx, but you may use your own by importing it and then passing it as a parameter when calling `withDocxDeserializer`. See `site/PasteDocxDeserializer.js` for an example.
 
 ### Checkout an Example
 
