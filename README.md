@@ -33,7 +33,7 @@ https://slate-docx-deserializer.netlify.app/
 The plugin does NOT support:
 * Nested Ordered Lists (it currently supports nested unordered lists because of styling workarounds)
 
-### Contributing!
+## Contributing!
 * You can run some tests inside the `package` folder by running `yarn test`
 
 
