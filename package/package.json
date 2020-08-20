@@ -1,6 +1,6 @@
 {
   "name": "slate-docx-deserializer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/index.js",
   "author": "mdmjg <mdj308@nyu.edu>",
   "license": "MIT",
